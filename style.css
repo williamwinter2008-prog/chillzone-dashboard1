@@ -318,3 +318,157 @@ flex-direction:column;
 }
 
 }
+/* ===== Background Engine ===== */
+
+.star{
+
+position:absolute;
+background:white;
+border-radius:50%;
+opacity:.8;
+animation:twinkle 4s infinite;
+
+}
+
+@keyframes twinkle{
+
+0%,100%{
+
+opacity:.2;
+
+}
+
+50%{
+
+opacity:1;
+
+}
+
+}
+
+.particle{
+
+position:absolute;
+bottom:-20px;
+
+width:4px;
+height:4px;
+
+border-radius:50%;
+
+background:#00C2FF;
+
+opacity:.4;
+
+animation:floatUp linear infinite;
+
+}
+
+@keyframes floatUp{
+
+from{
+
+transform:translateY(0);
+
+}
+
+to{
+
+transform:translateY(-120vh);
+
+}
+
+}
+
+#moon{
+
+position:absolute;
+
+top:90px;
+right:120px;
+
+width:140px;
+height:140px;
+
+border-radius:50%;
+
+background:#f4f4f4;
+
+box-shadow:0 0 80px white;
+
+}
+
+#sun{
+
+position:absolute;
+
+top:90px;
+right:120px;
+
+width:150px;
+height:150px;
+
+border-radius:50%;
+
+background:#FFD54A;
+
+box-shadow:0 0 100px gold;
+
+display:none;
+
+}
+
+body[data-theme="light"] #sun{
+
+display:block;
+
+}
+
+body[data-theme="light"] #moon{
+
+display:none;
+
+}
+
+body[data-theme="light"] .star{
+
+display:none;
+
+}
+
+.shooting-star{
+
+position:absolute;
+
+left:-200px;
+
+width:180px;
+height:2px;
+
+background:linear-gradient(to right,white,transparent);
+
+animation:shoot 2s linear;
+
+}
+
+@keyframes shoot{
+
+from{
+
+transform:
+translateX(0)
+translateY(0)
+rotate(20deg);
+
+}
+
+to{
+
+transform:
+translateX(1700px)
+translateY(300px)
+rotate(20deg);
+
+}
+
+}
