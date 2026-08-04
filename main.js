@@ -153,3 +153,22 @@ function initialiseScrollAnimations(){
     elements.forEach(el=>observer.observe(el));
 
 }
+/*
+==========================================
+ PixelBot v2
+ Mouse Glow
+==========================================
+*/
+
+const glow = document.createElement("div");
+
+glow.id = "mouse-glow";
+
+document.body.appendChild(glow);
+
+document.addEventListener("mousemove", (e)=>{
+
+    glow.style.left = e.clientX + "px";
+    glow.style.top = e.clientY + "px";
+
+});
